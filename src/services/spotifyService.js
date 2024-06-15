@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
-const redirectUri = 'http://localhost:5173/callback'; // Your redirect URI
+const redirectUri = import.meta.env.VITE_SPOTIFY_CALLBACK_URI; // Your redirect URI
 const scopes = 'user-read-private user-read-email user-top-read'; // Requested Spotify scopes
 
 export function getSpotifyAuthUrl() {
